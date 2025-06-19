@@ -2,14 +2,19 @@ package entities;
 
 import enums.Dipartimento;
 
-public class Dipendende {
+public class Dipendente {
     private final int matricola;
-    private final double stipendio;
+    private double stipendio;
     private Dipartimento dipartimento;
 
-    public Dipendende(int matricola, double stipendio, Dipartimento dipartimento) {
+    public Dipendente(int matricola, double stipendio, Dipartimento dipartimento) {
         this.matricola = matricola;
         this.stipendio = stipendio;
+        this.dipartimento = dipartimento;
+    }
+
+    public Dipendente(int matricola, Dipartimento dipartimento) {
+        this.matricola = matricola;
         this.dipartimento = dipartimento;
     }
 
@@ -27,5 +32,9 @@ public class Dipendende {
 
     public void setDipartimento(Dipartimento dipartimento) {
         this.dipartimento = dipartimento;
+    }
+
+    public double calculateSalary() {
+        return stipendio;
     }
 }
