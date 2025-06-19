@@ -1,8 +1,9 @@
 package entities;
 
 import enums.Dipartimento;
+import interfaces.Orario;
 
-public class Dipendente {
+public abstract class Dipendente implements Orario {
     private final int matricola;
     private double stipendio;
     private Dipartimento dipartimento;
